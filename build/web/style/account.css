@@ -1,0 +1,23 @@
+
+.account {
+    background-color: lightblue;
+    text-align : center;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 2rem;
+}
+.account div {
+    padding: 0.5rem;
+    
+}
+.account span{
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+}
+.account button {
+    margin : 1rem;
+}
+.account img{
+    width: 20%;
+
+}

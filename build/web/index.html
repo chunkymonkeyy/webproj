@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>성재정미소</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style/account.css" rel="stylesheet" type="text/css" /> 
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" />
+        <link href="style/main.css" rel="stylesheet" type="text/css" />  
+        <link href="style/myNavRouter.css" rel="stylesheet" type="text/css" />  
+        <link href="style/myObj.css" rel="stylesheet" type="text/css" />  
+
+    </head>
+
+    <body>
+        <div id="titleNav">
+            <div id="title">
+                SJ Rice Mill
+            </div>
+            <div id="nav">
+
+            </div>
+        </div>
+
+        <div id="content">
+
+            <!-- HTML comment: 
+                The content div is empty. It will get content "injected into it"
+                by the NavRouter component.
+            -->
+
+        </div> <!-- end of content area -->
+
+        <div id="footer">
+            [ Jiyeon Kang ]
+        </div>
+
+        <script>
+            "use strict";
+        </script>
+
+        <!-- reusable js-->
+        <script src="js/reusable/MakeClickSortTable.js"></script>
+        <script src="js/reusable/MakeEmp.js"></script>
+        <script src="js/reusable/MakeNavRouter.js"></script>
+        <script src="js/reusable/MakeObj.js"></script>
+        <script src="js/reusable/SortableTableUtils.js"></script>
+        <script src="js/reusable/Utils.js"></script>
+        <script src="js/reusable/ajax.js"></script> 
+        <!-- content js-->
+        <script src="js/content/account.js"></script>
+        <script src="js/content/blogContent.js"></script>
+        <script src="js/content/clickSortUserContent.js"></script>
+        <script src="js/content/empContent.js"></script>
+        <script src="js/content/homeContent.js"></script>
+        <script src="js/content/liveProductContent.js"></script>
+        <script src="js/content/liveUserContent.js"></script>
+        <script src="js/content/objContent.js"></script>
+        <script src="js/content/productMods.js"></script>
+        <script src="js/content/webUserMods.js"></script>
+
+        <script>
+
+            // Home | Account | Search | Tutorial | Blog
+            var myNavList = [
+
+                // action attribute is a function name - no quotes aroudnd home.
+                {linkText: "Home", linkURL: "#/home", action: homeContent},
+                {
+                    header: "Account",
+                    subMenu: [
+                        {linkText: "Register", linkURL: "#/userInsert", action: webUserMods.insert},
+                        //{linkText: "Product Register", linkURL: "#/productInsert", action: productMods.insert},
+                        {linkText: "Log In", linkURL: "#/login", action: account.logon}, //
+                        {linkText: "Log Out", linkURL: "#/logoff", action: account.logoff}, //
+                        {linkText: "Profile", linkURL: '#/profile', action: account.getProfile} //
+                    ]
+                },
+                {
+                    header: "Search",
+                    subMenu: [
+                        {linkText: "Objects", linkURL: "#/objects", action: objContent},
+                        {linkText: "Employee", linkURL: "#/employee", action: empContent},
+                        {linkText: "Live Users (WORKS)", linkURL: "#/liveUsers", action: liveUserContent},
+                        {linkText: "Live Products", linkURL: "#/liveProducts", action: liveProductContent}
+                    ]
+                },
+
+                {linkText: "Blog", linkURL: "#/blog", action: blogContent}
+            ];
+
+            var myNav = MakeNavRouter({
+                navId: "nav", // this is where the nav bar will be injected
+                navList: myNavList, // the list of link objects (linkText, linkURL, actions)
+                contentId: "content", // the id where content is to be injected
+                startLink: "#/home"     // routing will set this as the first link. 
+            });
+
+            // Add a new link and associated action into the routing table, but 
+            // without any link or linkText showing up in the Nav Bar. 
+            myNav.addRoute({
+                 linkURL: "#/productInsert", 
+                 action: productMods.insert
+            });
+            myNav.addRoute({
+                linkURL: "#/userUpdate",
+                action: webUserMods.update
+            });
+            myNav.addRoute({
+                linkURL: "#/productUpdate",
+                action: productMods.update
+            });
+
+        </script>
+
+
+    </body>
+</html>

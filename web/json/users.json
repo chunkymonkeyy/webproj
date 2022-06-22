@@ -1,0 +1,58 @@
+[
+    {
+        "webUserId": "1",
+        "userEmail": "ttochi0105@naver.com",
+        "userPassword": "jiyeon",
+        "image": "",
+        "membershipFee": "0.00",
+        "birthday": "01/05/2000",
+        "userRoleId": "1",
+        "userRoleType": "Admin",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "2",
+        "userEmail": "abc5@gmail.com",
+        "userPassword": "abc",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ABC-2021-LOGO.svg/800px-ABC-2021-LOGO.svg.png",
+        "membershipFee": "50.00",
+        "birthday": "01/01/1999",
+        "userRoleId": "2",
+        "userRoleType": "Member",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "3",
+        "userEmail": "asd@gmail.com",
+        "userPassword": "asd",
+        "image": "",
+        "membershipFee": "100.00",
+        "birthday": "02/02/1999",
+        "userRoleId": "3",
+        "userRoleType": "View",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "4",
+        "userEmail": "bcd@gmail.com",
+        "userPassword": "bcd",
+        "image": "",
+        "membershipFee": "",
+        "birthday": "",
+        "userRoleId": "3",
+        "userRoleType": "View",
+        "errorMsg": ""
+    },
+    {
+        "webUserId": "5",
+        "userEmail": "ddd@gmail.com",
+        "userPassword": "ddd",
+        "image": "",
+        "membershipFee": "50.00",
+        "birthday": "",
+        "userRoleId": "3",
+        "userRoleType": "View",
+        "errorMsg": ""
+    }
+
+]

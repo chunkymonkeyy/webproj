@@ -1,0 +1,135 @@
+
+/*  Use ONLY the "slash star ... star slash" style comment inside a style sheet */
+/* Don't want tiny white border inside browser window - apply to html and body. */
+* { 
+    box-sizing: border-box;
+}
+
+html, body {  
+    margin:0; 
+    padding:0; 
+    scroll-behavior:smooth;
+}
+
+body { 
+    background-color: #EAE1D8; /* this is the turqoise color */
+    color: black;  /* color of font */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /* no tail font is more readable for small font */
+    font-size:16px;
+}
+
+#titleNav { /* titleNav is fixed, always at the top */
+    /* position fixed removes the element from the normal flow, placing it where you specify with top/bottom, left/right */
+    position:fixed; 
+    top:0rem;
+    left:0rem;
+    z-index: 1;     /* To make sure titleNav is on top of content, give it a higher z-index than content (content would have default value of zero). */
+    width: 100%;  
+     /* the next two rules will layout the title followed by the nav side by side in a row */
+    display:flex; 
+    flex-direction: column; 
+    
+    background-color:#7A7272; /*#7A7272 #F4DAB7*/
+    padding: 0.5rem;
+    /*padding-bottom: 10px; */
+    /* height: 86px; /* NEW */
+    color: white;
+    /*font-family: serif; */
+    font-weight: bold;
+    
+    /* give a little "3D"  effect to the edges of titleNav and footer */
+    box-shadow: 0px 0px 5px black;
+    
+}
+#title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem; /* spaces out letters a bit */
+    text-align: center;
+    white-space: nowrap;
+}
+#pageTitle { /* no change */
+    padding:12px;
+    padding-bottom: 0px;
+    font-size:50px;
+    letter-spacing: 1.5px; /* spaces out letters a bit */
+}
+
+#nav { /* fix the nav bar */
+    position: fixed; 
+    top: 0rem;
+    right: 0px;
+    text-align:right;
+    font-size: 1rem;
+    font-weight: bold;
+    /*padding-bottom: 12px;*/
+    padding-top: 1rem;
+    padding-right: 1rem;
+    white-space: nowrap;  /* don't allow nav links to wrap */
+}
+
+#nav a {  /* no change */
+    text-decoration:none;  /* Do not want links in "nav" to be underlined */
+    color: #C8C8C8; /* light gray: to provide color for links, you have to style the "a" tag */
+}
+
+#content {  /* Added padding top and bottom to prevent top/bottom content from getting hidden under titleNav/footer */ 
+    padding: 1rem;
+    /* padding-top: 80px; prevent the top of the content from getting hidden under the fixed titleNav */
+    /*  padding-bottom: 40px; prevent the the bottom of the content from getting hidden under the fixed footer */
+    padding-top:7rem; /* make sure fixed titleNav does not cover up any content in mobile */
+    padding-bottom: 2rem; /* make sure fixed footer doesn't cover up any content */
+    
+    font-size: 1.15rem;
+    line-height: 2rem; 
+}
+
+#footer { /* footer fixed, always at the bottom */
+    position: fixed;
+    bottom: 0px; 
+    left: 0px; 
+    z-index: 1; /* make sure footer is on top of content which would have default z-index value of 0 */
+    
+    background-color:#8E677A;
+    color: white;
+    width:100%; /* fixed elements don't fill out the width automatically, so set the width */
+    
+    text-align:center;
+    font-size: 1rem;
+    
+    padding: 0.5rem;
+    box-shadow: 0px 0px 5px #888888;/* give a little "3D"  effect to the edges of titleNav and footer */
+}
+
+@media only screen and (min-width: 40rem) { 
+
+    /* in desktop the titleNav is not as tall, so less top margin needed to prevent titleNav from hiding top of for content */
+    #content {
+        padding-top:4.5rem; /* less padding is needed in desktop to make sure fixed titleNav does not cover up any content */
+    }
+
+    #titleNav {
+        /* flex attributes */
+        flex-direction: row;
+        justify-content: space-between; /* flex attribute will push title left and nav right, with "space between" */
+    }
+}     
+
+.indent {
+    margin-left: 1.5rem;
+}
+
+pre {
+    margin-bottom:1.5rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    line-height:1.25rem;
+    font-size: 0.95rem;
+
+    padding:0.5rem;
+    padding-left:0rem;
+    background-color: #CCCCDD; 
+
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.4);
+}

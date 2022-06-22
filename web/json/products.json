@@ -1,0 +1,53 @@
+[
+    {
+        "productId": "6",
+        "productName": "rice",
+        "img": "https://cdn.greatlifepublishing.net/wp-content/uploads/sites/2/2019/05/21191838/White-Rice-OG-728x381.jpg",
+        "price": "50.00",
+        "stock": "150",
+        "webUserId": "1",
+        "userEmail": "abc@gmail.com",
+        "errorMsg": ""
+    },
+    {
+        "productId": "7",
+        "productName": "brownrice",
+        "img": "",
+        "price": "55.00",
+        "stock": "100",
+        "webUserId": "1",
+        "userEmail": "ttochi0105@naver.com",
+        "errorMsg": ""
+    },
+    {
+        "productId": "8",
+        "productName": "stickyrice",
+        "img": "",
+        "price": "55.00",
+        "stock": "",
+        "webUserId": "1",
+        "userEmail": "ttochi0105@naver.com",
+        "errorMsg": ""
+    },
+    {
+        "productId": "9",
+        "productName": "redbean",
+        "img": "",
+        "price": "0.00",
+        "stock": "",
+        "webUserId": "2",
+        "userEmail": "abc@gmail.com",
+        "errorMsg": ""
+    },
+    {
+        "productId": "10",
+        "productName": "blackbean",
+        "img": "",
+        "price": "40.00",
+        "stock": "",
+        "webUserId": "3",
+        "userEmail": "asd@gmail.com",
+        "errorMsg": ""
+    }
+
+]
